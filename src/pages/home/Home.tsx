@@ -1,5 +1,6 @@
 import React from "react";
 import Hero from "../../components/Hero";
+import AboutUs from "../../components/AboutUs";
 import carouseImage1 from "../../assets/svgs/carouseImage1.svg";
 import carouseImage2 from "../../assets/svgs/carouseImage2.svg";
 import carouseImage3 from "../../assets/svgs/carouseImage3.svg";
@@ -14,8 +15,9 @@ const images: Images[] = [
 
 const Home = () => {
   return (
-    <div className="bg-red-400">
-      <CarouselSection images={images} title="About Us And We Do" />
+    <div className="">
+      {/* <CarouselSection images={images} title="About Us And We Do" /> */}
+      <AboutUs />
     </div>
   );
 };

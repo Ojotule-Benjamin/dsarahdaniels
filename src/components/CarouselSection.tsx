@@ -9,11 +9,11 @@ type CarouselSectionProps = {
 
 const CarouselSection: React.FC<CarouselSectionProps> = ({ images, title }) => {
   return (
-    <div className="carouselMain">
+    <div className="carouselMain relative">
       <h1>{title}</h1>
       <Carousel>
         {images.map((item, index) => (
-          <Carousel.Item key={index} interval={1000}>
+          <Carousel.Item key={index} interval={1000} className="d-block w-100">
             <img className="d-block w-100" src={item.src} alt={item.alt} />
           </Carousel.Item>
         ))}
