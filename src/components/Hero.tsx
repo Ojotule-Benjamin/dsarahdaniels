@@ -1,6 +1,4 @@
 import React from "react";
-import Frame from "../assets/imgs/Frame.png";
-import CarouselSection from "./CarouselSection";
 
 const Hero = () => {
   return (

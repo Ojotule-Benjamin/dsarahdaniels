@@ -1,23 +1,44 @@
 import React from "react";
-import { Carousel } from "react-bootstrap";
-import { Images } from "../interfaces/global.interface";
+import { CarouselSectionProps } from "../interfaces/global.interface";
+import { Swiper } from "swiper/react";
+import "swiper/swiper-bundle.min.css";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import "swiper/css";
 
-type CarouselSectionProps = {
-  images: Images[];
-  title: string;
-};
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 
-const CarouselSection: React.FC<CarouselSectionProps> = ({ images, title }) => {
+const CarouselSection: React.FC<CarouselSectionProps> = ({
+  carouselImages,
+  title,
+}) => {
   return (
-    <div className="carouselMain relative">
+    <div className="carouselMain w-fit ">
       <h1>{title}</h1>
-      <Carousel>
-        {images.map((item, index) => (
-          <Carousel.Item key={index} interval={1000} className="d-block w-100">
-            <img className="d-block w-100" src={item.src} alt={item.alt} />
-          </Carousel.Item>
+      <div className="w-full flex items-center justify-center">
+        {carouselImages.map((item, index) => (
+          <div className="w-screen" key={index}>
+            <Swiper
+              spaceBetween={50}
+              slidesPerView={2}
+              modules={[Navigation, Pagination, Scrollbar, A11y]}
+              navigation
+              pagination={{ clickable: true }}
+              scrollbar={{ draggable: true }}
+            >
+              <img
+                className="w-full object-cover"
+                style={{ height: "calc(100vh - 160px)" }}
+                src={item.src}
+                alt={item.alt}
+              />
+            </Swiper>
+          </div>
         ))}
-      </Carousel>
+      </div>
     </div>
   );
 };

@@ -1,11 +1,13 @@
 import React from "react";
-import Hero from "../../components/Hero";
+import GetUpdates from "../../components/GetUpdates";
+import EventDetails from "../../components/EventDetails";
 
 const Services = () => {
   return (
     <div>
       <h1>Welcome to Services Page</h1>
-      <Hero />
+      <EventDetails />
+      <GetUpdates />
     </div>
   );
 };
