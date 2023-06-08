@@ -1,17 +1,17 @@
 import React from "react";
 import {
-  DsarahDanielsLogo,
   FacebookIconSvg,
   InstagramIconSvg,
   TwitterIconSvg,
 } from "../assets/svgs/icons";
 import { Link } from "react-router-dom";
+import Logo from "../assets/imgs/Logo.png";
 
 const Navbar = () => {
   return (
-    <div className="flex items-center justify-between w-full h-40 px-16">
-      <div className="">
-        <DsarahDanielsLogo />
+    <div className="flex items-center justify-between w-full h-36 px-16">
+      <div className=" w-56  h-36 flex items-center justify-center ">
+        <img src={Logo} alt="logo" className=" w-56 h-36 object-cover" />
       </div>
       <ul className="flex items-center gap-5 font-sanchez font-normal text-lg text-color-textColor">
         <li>

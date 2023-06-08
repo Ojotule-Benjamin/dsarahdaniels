@@ -7,7 +7,7 @@ const CustomButton: React.FC<ICustomButton> = ({
   text,
   className,
 }) => {
-  const buttonClassName = `w-32 h-9 bg-white font-playfairDisplay font-medium text-center text-sm text-[#7A7E83] ${className}`;
+  const buttonClassName = `w-32 h-9 bg-secondaryColorLight border border-secondaryColorLight font-playfairDisplay font-medium text-center text-sm text-[#7A7E83] ${className}`;
 
   return (
     <button className={buttonClassName} onClick={onClick} disabled={disabled}>
