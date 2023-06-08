@@ -1,29 +1,52 @@
-//export interface IinputData = {};
+import React from "react";
 
-export type carouselImagesItems = {
+//types
+export interface carouselImagesItems {
   id: number;
   src: string;
   alt: string;
-};
+}
 
-export type CarouselSectionProps = {
-  carouselImages: carouselImagesItems[];
-  title?: string;
-};
-
-export type ICustomButton = {
+export interface ICustomButton {
   text: string;
   onClick?: () => void;
   disabled?: boolean;
   className?: string;
-};
+}
 
-export type IsneakPeakImages = {
+export interface IsneakPeakImages {
   id: number;
   img: string;
   alt: string;
+}
+
+export interface IWhatWeDoItem {
+  id: number;
+  title: string;
+  desc: string;
+  imgs: string;
+}
+
+export interface howWeWorkImgsItem {
+  id: number;
+  src: string;
+  alt: string;
+}
+
+//components types
+export type MeetCreativeDirectorProps = {
+  img: string;
+  title?: string;
+  desc: string;
+  subTitle?: string;
+  button: React.ReactElement<ICustomButton> | null;
+  generalClassName?: string;
+  descClassName?: string;
 };
 
+export type CarouselSectionProps = {
+  carouselImages: carouselImagesItems[];
+};
 export interface IGetUpdatesProps {
   firstName: string;
   lastName: string;
@@ -39,9 +62,3 @@ export interface ICustomInputProps {
   placeholder?: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
-
-// export interface IDataItem {
-//   id: number;
-//   label: string;
-//   placeholder?: string;
-// }

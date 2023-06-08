@@ -26,7 +26,7 @@ const GetUpdates = () => {
   };
 
   return (
-    <div className="w-screen h-[400px] flex flex-col items-center justify-center gap-10 bg-[#F0EDE8]">
+    <div className="w-screen h-[400px] flex flex-col items-center justify-center gap-10 bg-secondaryColorLight">
       <h1 className="text-center font-playfairDisplay font-medium text-4xl text-[#094257] ">
         Get Updates
       </h1>
