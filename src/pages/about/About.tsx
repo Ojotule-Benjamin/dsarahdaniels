@@ -10,8 +10,14 @@ import MeetCreativeDirector from "../../components/MeetCreativeDirector";
 import Reviews from "../../components/Reviews";
 import img_1 from "../../assets/imgs/img_1.png";
 import CustomButton from "../../components/CustomButton";
+import { useNavigate } from "react-router-dom";
 
 const About = () => {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/contact");
+  };
+
   const aboutCarouselImgs: carouselImagesItems[] = [
     {
       id: 1,
@@ -84,7 +90,7 @@ const About = () => {
       <MeetCreativeDirector
         img={img_1}
         subTitle="Sarah Daniels"
-        button={<CustomButton text="Connect" />}
+        button={<CustomButton text="Connect" onClick={() => handleClick()} />}
         generalClassName="flex items-center justify-around"
         descClassName="text-lg"
         desc="Creating unforgettable events is an art that combines joy, love, and simplicity, and at Dsarah Daniels, we are masters of this craft."

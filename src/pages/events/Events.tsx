@@ -2,8 +2,16 @@ import React from "react";
 import Header from "../../components/Header";
 import { IEventImageItem } from "../../interfaces/global.interface";
 import CustomButton from "../../components/CustomButton";
+import { useNavigate } from "react-router-dom";
 
 const Events = () => {
+  const navigate = useNavigate();
+
+  const handleClick = (item: IEventImageItem, id: string) => {
+    navigate(`/events/gallery/?${id}`, { state: { item } });
+  };
+
+  //data
   const eventsImgs: IEventImageItem[] = [
     {
       id: 1,
@@ -77,7 +85,7 @@ const Events = () => {
   return (
     <div>
       <Header header="Our Events" />
-      <div className=" w-full flex justify-center items-center columns-3 px-16 pb-10 flex-wrap bg-backgroundColor">
+      <div className=" w-full flex justify-center items-center columns-3 gap-5 pb-10 flex-wrap bg-backgroundColor">
         {eventsImgs.map((item, index) => (
           <div
             className="w-96 h-[370px] flex items-center justify-center flex-col relative"
@@ -91,7 +99,7 @@ const Events = () => {
             <img
               src={item.src2}
               alt={item.label}
-              className="w-80 h-[237px]  object-contain z-10 absolute top-9 left-6  "
+              className="w-80 h-[237px]  object-contain z-10 absolute top-9 left-6 right-28  "
             />
             <img
               src={item.src3}
@@ -100,6 +108,7 @@ const Events = () => {
             />
 
             <CustomButton
+              onClick={() => handleClick(item, `${item.id}`)}
               text={item.label}
               className=" w-80 h-12 shadow-lg shadow-backgroundColor-500/50 absolute bottom-0"
             />

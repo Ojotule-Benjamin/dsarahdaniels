@@ -9,6 +9,7 @@ import Blog from "./pages/blog/Blog";
 import Shop from "./pages/shop/Shop";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
+import Gallery from "./pages/gallery/Gallery";
 
 const Layout = () => {
   return (
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
       {
         path: "/events",
         element: <Events />,
+      },
+      {
+        path: "/events/gallery/",
+        element: <Gallery />,
       },
       {
         path: "/enquiry",

@@ -11,7 +11,7 @@ const EventDetails = () => {
   return (
     <div className="flex flex-col items-center justify-center pt-10 ">
       <div className="w-1/2 mb-10">
-        <h1 className="  text-center font-playfairDisplay font-medium text-4xl text-[#094257] pb-10">
+        <h1 className="  text-center font-playfairDisplay font-medium text-4xl text-primaryColorBlue pb-10">
           Please share the details of your event with us.
         </h1>
         <p className=" font-playfairDisplay font-normal text-lg text-[#9A9A9D] text-center">
@@ -23,7 +23,7 @@ const EventDetails = () => {
       </div>
 
       <form className=" py-5 flex flex-col gap-2 items-center justify-center">
-        <h3 className=" font-playfairDisplay font-normal text-2xl text-center text-[#094257] mb-5">
+        <h3 className=" font-playfairDisplay font-normal text-2xl text-center text-primaryColorBlue mb-5">
           Please Provide Us With Some Information About Yourself?
         </h3>
 
@@ -40,7 +40,7 @@ const EventDetails = () => {
             />
             {index === 3 && (
               <div>
-                <h1 className="text-center font-playfairDisplay font-medium text-2xl text-[#094257] mt-4">
+                <h1 className="text-center font-playfairDisplay font-medium text-2xl text-primaryColorBlue mt-4">
                   Tell Us About Your Event
                 </h1>
               </div>
