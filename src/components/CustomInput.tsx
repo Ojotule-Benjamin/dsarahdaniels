@@ -19,7 +19,7 @@ const CustomInput: React.FC<ICustomInputProps> = ({
       <input
         type={type}
         name={name}
-        value={value}
+        //value={value}
         onChange={onChange}
         placeholder={placeholder}
         className={inputClassName}
