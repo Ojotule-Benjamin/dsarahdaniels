@@ -1,5 +1,3 @@
-import React from "react";
-
 //types
 export interface carouselImagesItems {
   id: number;
@@ -33,6 +31,14 @@ export interface howWeWorkImgsItem {
   alt: string;
 }
 
+export interface IEventImageItem {
+  id: number;
+  src1: string;
+  src2: string;
+  src3: string;
+  label: string;
+}
+
 //components types
 export type MeetCreativeDirectorProps = {
   img: string;
@@ -61,4 +67,8 @@ export interface ICustomInputProps {
   className?: string;
   placeholder?: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}
+
+export interface IHeaderProps {
+  header: string;
 }
