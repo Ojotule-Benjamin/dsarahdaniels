@@ -5,7 +5,7 @@ const Service = () => {
   const location = useLocation().state;
   //const { item } = location.state;
 
-  const { item } = location.state;
+  const { item } = location.state || {};
 
   return (
     <div>
