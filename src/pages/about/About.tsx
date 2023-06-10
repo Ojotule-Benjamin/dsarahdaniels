@@ -11,6 +11,7 @@ import Reviews from "../../components/Reviews";
 import img_1 from "../../assets/imgs/img_1.png";
 import CustomButton from "../../components/CustomButton";
 import { useNavigate } from "react-router-dom";
+import Header from "../../components/Header";
 
 const About = () => {
   const navigate = useNavigate();
@@ -59,9 +60,10 @@ const About = () => {
 
   return (
     <div className=" bg-backgroundColor">
-      <h1 className=" w-full h-24 flex items-center justify-center font-playfairDisplay font-normal text-5xl text-primaryColorBlue">
-        About Us And We Do
-      </h1>
+      <Header
+        header="About Us And We Do"
+        className="w-full h-24  flex items-center justify-center font-playfairDisplay font-normal text-5xl text-primaryColorBlue"
+      />
       <CarouselSection carouselImages={aboutCarouselImgs} />
       <WhatWeDo />
       <div className=" w-full px-16 my-6">

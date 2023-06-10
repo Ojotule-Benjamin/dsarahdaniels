@@ -1,4 +1,5 @@
 //types
+
 export interface carouselImagesItems {
   id: number;
   src: string;
@@ -39,6 +40,14 @@ export interface IEventImageItem {
   label: string;
 }
 
+export interface servicesListItems {
+  id: number;
+  service: string;
+  img: string;
+  desc: string;
+  servicesRendered?: string[];
+}
+
 //components types
 export type MeetCreativeDirectorProps = {
   img: string;
@@ -71,4 +80,5 @@ export interface ICustomInputProps {
 
 export interface IHeaderProps {
   header: string;
+  className?: string;
 }
