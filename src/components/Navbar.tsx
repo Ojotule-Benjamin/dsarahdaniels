@@ -7,7 +7,7 @@ import {
 import { Link } from "react-router-dom";
 import Logo from "../assets/imgs/Logo.png";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import NavModal from "./NavModal";
+import NavModal from "../modals/NavModal";
 
 const Navbar = () => {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);

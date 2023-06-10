@@ -2,7 +2,8 @@ import React from "react";
 import Header from "../../components/Header";
 import services_4 from "../../assets/imgs/services_4.png";
 import GetUpdates from "../../components/GetUpdates";
-import { servicesList } from "../../components/NavModal";
+import { servicesList } from "../../data";
+import { servicesListItems } from "../../interfaces/global.interface";
 
 const Services = () => {
   return (
@@ -31,7 +32,7 @@ const Services = () => {
         </p>
       </div>
       <div className=" w-full px-16 py-5">
-        {servicesList.map((item, index) => (
+        {servicesList.map((item: servicesListItems, index: number) => (
           <div
             className={`flex  items-center gap-5  ${
               index % 2 === 1 ? "flex-row-reverse" : "flex-row"
