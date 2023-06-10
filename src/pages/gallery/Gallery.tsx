@@ -8,10 +8,10 @@ const Gallery = () => {
   const location = useLocation();
   const { item } = location.state;
 
+  // Go back to the previous location
   const navigate = useNavigate();
-
   const handleGoBack = () => {
-    navigate(-1); // Go back to the previous location
+    navigate(-1);
   };
 
   return (

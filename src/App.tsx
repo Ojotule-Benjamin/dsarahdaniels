@@ -10,6 +10,7 @@ import Shop from "./pages/shop/Shop";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Gallery from "./pages/gallery/Gallery";
+import Service from "./pages/service/Service";
 
 const Layout = () => {
   return (
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
       {
         path: "/services",
         element: <Services />,
+      },
+      {
+        path: "/service",
+        element: <Service />,
       },
       {
         path: "/events",
