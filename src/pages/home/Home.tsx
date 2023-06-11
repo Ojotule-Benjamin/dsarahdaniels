@@ -8,8 +8,14 @@ import GetUpdates from "../../components/GetUpdates";
 import EventDetails from "../../components/EventDetails";
 import { carouselImagesItems } from "../../interfaces/global.interface";
 import creativeDirector from "../../assets/imgs/creativeDirector.png";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/enquiry");
+  };
   const carouselImages: carouselImagesItems[] = [
     {
       id: 1,
@@ -48,7 +54,7 @@ const Home = () => {
         planning and design, and let's create unforgettable memories together"
         title="Meet Our Creative Director"
         subTitle="Sarah Daniels"
-        button={<CustomButton text="Connect" />}
+        button={<CustomButton text="Connect" onClick={handleClick} />}
       />
       <SneakPeakGallery />
       <EventDetails />

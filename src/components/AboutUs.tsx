@@ -35,7 +35,7 @@ const AboutUs = () => {
           to start planning your unforgettable event.
         </p>
         <Link to="/about">
-          <CustomButton text="Learn more" />
+          <CustomButton text="Learn more" className=" bg-white" />
         </Link>
       </div>
     </div>

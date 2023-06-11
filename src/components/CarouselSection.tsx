@@ -18,7 +18,7 @@ const CarouselSection: React.FC<CarouselSectionProps> = ({
       <div className="w-full flex items-center">
         {carouselImages.map((item, index) => (
           <Swiper
-            spaceBetween={50}
+            spaceBetween={0}
             slidesPerView={2}
             key={index}
             className="w-full swiper"
