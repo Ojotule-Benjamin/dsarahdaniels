@@ -1,14 +1,18 @@
 import React from "react";
 import { servicesListItems } from "../interfaces/global.interface";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { servicesList } from "../data";
 
 const NavModal = () => {
   const navigate = useNavigate();
+  // const [isModalOpen, setIsModalOpen] = React.useState<boolean>(false);
 
-  //   const handleNav = (id: string, item: servicesListItems) => {
-  //     navigate(`/service/?${id}`, { state: { item } });
-  //   };
+  // const handleMouseEnter = () => {
+  //   setIsModalOpen(true);
+  // };
+  // const handleMouseLeave = () => {
+  //   setIsModalOpen(false);
+  // };
 
   const handleNav = (item: servicesListItems) => {
     navigate(`/service?id=${item.id}`, { state: { item } });
@@ -20,7 +24,6 @@ const NavModal = () => {
         <h1
           key={index}
           onClick={() => handleNav(item)}
-          //onClick={() => handleNav(`${item.id}`, item)}
           className="text-sm font-normal hover:border-b-2 border-primaryColorBlue duration-300 ease-in-out"
         >
           {item.service}

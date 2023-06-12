@@ -1,13 +1,10 @@
 import React from "react";
-import { useLocation, useParams } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import Header from "../../components/Header";
 
 const Service = () => {
   const location = useLocation();
-  const { data } = useParams();
   const { item } = location.state || {};
-
-  console.log({ data });
 
   return (
     <div>

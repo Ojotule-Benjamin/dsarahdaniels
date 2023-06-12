@@ -1,6 +1,5 @@
 import React from "react";
 import CustomButton from "./CustomButton";
-import { IsneakPeakImages } from "../interfaces/global.interface";
 import { Link } from "react-router-dom";
 import "swiper/swiper-bundle.min.css";
 import { EffectCoverflow, Pagination } from "swiper";
@@ -74,19 +73,19 @@ const SneakPeakGallery = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-          <img src={require("../assets/imgs/sneakPeak1.png")} alt="" />
+          <img src={require("../assets/imgs/sneakPeak1.png")} alt="slider" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={require("../assets/imgs/sneakPeak2.png")} alt="" />
+          <img src={require("../assets/imgs/sneakPeak2.png")} alt="slider" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={require("../assets/imgs/sneakPeak3.png")} alt="" />
+          <img src={require("../assets/imgs/sneakPeak3.png")} alt="slider" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={require("../assets/imgs/sneakPeak4.png")} alt="" />
+          <img src={require("../assets/imgs/sneakPeak4.png")} alt="slider" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={require("../assets/imgs/sneakPeak5.png")} alt="" />
+          <img src={require("../assets/imgs/sneakPeak5.png")} alt="slider" />
         </SwiperSlide>
       </Swiper>
 

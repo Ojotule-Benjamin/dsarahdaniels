@@ -5,7 +5,7 @@ import GetUpdates from "../../components/GetUpdates";
 import { servicesList } from "../../data";
 import { servicesListItems } from "../../interfaces/global.interface";
 import CustomButton from "../../components/CustomButton";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Services = () => {
   const navigate = useNavigate();
@@ -19,7 +19,7 @@ const Services = () => {
       <Header header="Services" />
       <div className="px-16">
         <img src={services_4} alt="" />
-        <h1 className=" font-playfairDisplay font-bold text-center text-primaryColorBlue text-2xl py-5">
+        <h1 className=" font-playfairDisplay font-bold text-center text-primaryColorBlue text-4xl py-5">
           What We Do
         </h1>
         <p className=" font-playfairDisplay font-normal text-justify text-lg text-textColorBlack pb-5">
@@ -61,14 +61,6 @@ const Services = () => {
               <p className=" font-playfairDisplay font-normal text-sm text-justify text-textColorBlack">
                 {item.desc}
               </p>
-              {/* <Link 
-              to={{
-                pathname: `/services/service/${item.id}`,
-                
-              }}
-              >
-              
-              </Link> */}
               <CustomButton
                 text="Read more"
                 onClick={() => handleClick(item, `${item.id}`)}
