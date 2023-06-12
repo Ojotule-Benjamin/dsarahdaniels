@@ -6,6 +6,7 @@ import {
 } from "../assets/svgs/icons";
 import { Link } from "react-router-dom";
 import Logo from "../assets/imgs/Logo.png";
+import MenuIcon from "@mui/icons-material/Menu";
 
 const Navbar = () => {
   return (
@@ -48,6 +49,7 @@ const Navbar = () => {
           <TwitterIconSvg />
         </a>
       </div>
+      <MenuIcon />
     </div>
   );
 };

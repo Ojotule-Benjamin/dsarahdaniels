@@ -69,7 +69,7 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <div>
+    <div className="w-screen h-screen overflow-y-auto">
       <RouterProvider router={router} />
     </div>
   );
