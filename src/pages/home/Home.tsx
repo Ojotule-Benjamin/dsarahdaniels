@@ -63,8 +63,8 @@ const Home = () => {
         }
       />
       <SneakPeakGallery />
-      {/* <EventDetails />
-      <GetUpdates />  */}
+      <EventDetails />
+      <GetUpdates />
     </div>
   );
 };

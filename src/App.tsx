@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Home from "./pages/home/Home";
 import About from "./pages/about/About";
@@ -11,14 +11,25 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Gallery from "./pages/gallery/Gallery";
 import Service from "./pages/service/Service";
+import MenuNav from "./components/MenuNav";
 
 const Layout = () => {
+  const [menuOpen, setMenuOpen] = useState<boolean>(false);
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
   return (
-    <>
-      <Navbar />
+    <div className="relative">
+      <Navbar
+        menuOpen={menuOpen}
+        setMenuOpen={setMenuOpen}
+        toggleMenu={toggleMenu}
+      />
+      {/* <MenuNav menuOpen={menuOpen} setMenuOpen={setMenuOpen} /> */}
+      {menuOpen && <MenuNav menuOpen={menuOpen} setMenuOpen={setMenuOpen} />}
       <Outlet />
       <Footer />
-    </>
+    </div>
   );
 };
 
