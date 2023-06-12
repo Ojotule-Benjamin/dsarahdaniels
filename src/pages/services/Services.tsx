@@ -4,8 +4,16 @@ import services_4 from "../../assets/imgs/services_4.png";
 import GetUpdates from "../../components/GetUpdates";
 import { servicesList } from "../../data";
 import { servicesListItems } from "../../interfaces/global.interface";
+import CustomButton from "../../components/CustomButton";
+import { Link, useNavigate } from "react-router-dom";
 
 const Services = () => {
+  const navigate = useNavigate();
+
+  const handleClick = (item: servicesListItems, id: string) => {
+    navigate(`/services/service/${id}`, { state: { item } });
+  };
+
   return (
     <div>
       <Header header="Services" />
@@ -53,6 +61,18 @@ const Services = () => {
               <p className=" font-playfairDisplay font-normal text-sm text-justify text-textColorBlack">
                 {item.desc}
               </p>
+              {/* <Link 
+              to={{
+                pathname: `/services/service/${item.id}`,
+                
+              }}
+              >
+              
+              </Link> */}
+              <CustomButton
+                text="Read more"
+                onClick={() => handleClick(item, `${item.id}`)}
+              />
             </div>
           </div>
         ))}

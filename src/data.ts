@@ -131,6 +131,10 @@ export const servicesList = [
       "Event Coordination and Planning",
       "Photography and Videography",
       "Timeline Management",
+      "Party Favors and Gifts",
+      "Event Coordination and Planning",
+      "Photography and Videography",
+      "Timeline Management",
     ],
   },
   {

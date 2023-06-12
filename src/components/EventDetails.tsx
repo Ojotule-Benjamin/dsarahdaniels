@@ -16,9 +16,11 @@ const EventDetails = () => {
         </h1>
         <p className=" font-playfairDisplay font-normal text-lg text-[#9A9A9D] text-center">
           Kindly share the details of your event with us, and we'll get in touch
-          with you as soon as possible. You can also reach us directly at 0703
-          585 3644. We look forward to creating an unforgettable experience with
-          you.
+          with you as soon as possible. You can also reach us directly at{" "}
+          <a href="tel:07035853644" className=" text-primaryColorBlue">
+            +234 7035 853 644
+          </a>
+          . We look forward to creating an unforgettable experience with you.
         </p>
       </div>
 
