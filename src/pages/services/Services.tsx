@@ -4,14 +4,22 @@ import services_4 from "../../assets/imgs/services_4.png";
 import GetUpdates from "../../components/GetUpdates";
 import { servicesList } from "../../data";
 import { servicesListItems } from "../../interfaces/global.interface";
+import CustomButton from "../../components/CustomButton";
+import { useNavigate } from "react-router-dom";
 
 const Services = () => {
+  const navigate = useNavigate();
+
+  const handleClick = (item: servicesListItems, id: string) => {
+    navigate(`/services/service/${id}`, { state: { item } });
+  };
+
   return (
     <div>
       <Header header="Services" />
       <div className="px-16">
         <img src={services_4} alt="" />
-        <h1 className=" font-playfairDisplay font-bold text-center text-primaryColorBlue text-2xl py-5">
+        <h1 className=" font-playfairDisplay font-bold text-center text-primaryColorBlue text-4xl py-5">
           What We Do
         </h1>
         <p className=" font-playfairDisplay font-normal text-justify text-lg text-textColorBlack pb-5">
@@ -53,6 +61,10 @@ const Services = () => {
               <p className=" font-playfairDisplay font-normal text-sm text-justify text-textColorBlack">
                 {item.desc}
               </p>
+              <CustomButton
+                text="Read more"
+                onClick={() => handleClick(item, `${item.id}`)}
+              />
             </div>
           </div>
         ))}

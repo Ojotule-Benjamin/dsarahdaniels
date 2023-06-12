@@ -40,7 +40,7 @@ const router = createBrowserRouter([
         element: <Services />,
       },
       {
-        path: "/service",
+        path: "/services/service/:data",
         element: <Service />,
       },
       {

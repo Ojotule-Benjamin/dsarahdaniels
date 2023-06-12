@@ -26,18 +26,18 @@ const About = () => {
       src: require("../../assets/imgs/sneakPeak2.png"),
       alt: "slide 1",
     },
-    {
-      id: 2,
-      //src: require("../../assets/imgs/carousel_2.png"),
-      src: require("../../assets/imgs/sneakPeak3.png"),
-      alt: "slide 2",
-    },
-    {
-      id: 3,
-      //src: require("../../assets/imgs/carousel_3.png"),
-      src: require("../../assets/imgs/sneakPeak5.png"),
-      alt: "slide 3",
-    },
+    // {
+    //   id: 2,
+    //   //src: require("../../assets/imgs/carousel_2.png"),
+    //   src: require("../../assets/imgs/sneakPeak3.png"),
+    //   alt: "slide 2",
+    // },
+    // {
+    //   id: 3,
+    //   //src: require("../../assets/imgs/carousel_3.png"),
+    //   src: require("../../assets/imgs/sneakPeak5.png"),
+    //   alt: "slide 3",
+    // },
   ];
 
   const howWeWorkImgs: howWeWorkImgsItem[] = [

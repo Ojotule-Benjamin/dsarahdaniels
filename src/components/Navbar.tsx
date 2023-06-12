@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   FacebookIconSvg,
   InstagramIconSvg,
@@ -6,19 +6,8 @@ import {
 } from "../assets/svgs/icons";
 import { Link } from "react-router-dom";
 import Logo from "../assets/imgs/Logo.png";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import NavModal from "../modals/NavModal";
 
 const Navbar = () => {
-  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
-
-  const handleMouseEnter = () => {
-    setIsModalOpen(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsModalOpen(false);
-  };
   return (
     <div className="flex items-center justify-between w-full h-36 px-16">
       <div className=" w-56  h-36 flex items-center justify-center ">
@@ -31,12 +20,8 @@ const Navbar = () => {
         <li>
           <Link to="/about">About</Link>
         </li>
-        <li onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-          <Link to="/services">
-            Services
-            <KeyboardArrowDownIcon style={{ fontSize: "16px" }} />
-          </Link>
-          {isModalOpen ? <NavModal /> : null}
+        <li>
+          <Link to="/services">Services</Link>
         </li>
         <li>
           <Link to="/events">Events</Link>
