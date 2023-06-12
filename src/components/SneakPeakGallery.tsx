@@ -43,7 +43,7 @@ import "../App.css";
 const SneakPeakGallery = () => {
   return (
     <div className="flex flex-col items-center justify-center">
-      <h1 className="text-center font-playfairDisplay font-medium text-4xl text-primaryColorBlue">
+      <h1 className="text-center font-playfairDisplay font-medium text-2xl xs:text-4xl text-primaryColorBlue">
         Sneak Peak At Our Gallery
       </h1>
 
@@ -89,8 +89,8 @@ const SneakPeakGallery = () => {
         </SwiperSlide>
       </Swiper>
 
-      <div className="flex flex-col items-center justify-center gap-5 px-60 my-5">
-        <p className="font-playfairDisplay font-normal text-lg text-[#9E9494] text-center px-5">
+      <div className="flex flex-col items-center justify-center gap-5 px-5 xs:px-60 my-5">
+        <p className="font-playfairDisplay font-normal text-[10px] xs:text-lg text-[#9E9494] text-center px-5">
           Let’s connect so I can listen to your wishes, understand your dreams
           and meet your expectations because my goal is always to bring joy and
           create everlasting memories for you and every one of your guests.
@@ -99,7 +99,10 @@ const SneakPeakGallery = () => {
           Sarah Daniels
         </h1>
         <Link to="/events">
-          <CustomButton text="More events" className=" bg-[#F0EDE8] " />
+          <CustomButton
+            text="More events"
+            className=" bg-secondaryColorLight w-20 h-5 xs:w-32 xs:h-9 text-[7px] xs:text-sm"
+          />
         </Link>
       </div>
     </div>

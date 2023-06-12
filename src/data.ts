@@ -1,3 +1,41 @@
+export const menuNav = [
+  {
+    id: "home",
+    label: "Home",
+    link: "/",
+  },
+  {
+    id: "about",
+    label: "About",
+    link: "/about",
+  },
+  {
+    id: "services",
+    label: "Services",
+    link: "/services",
+  },
+  {
+    id: "events",
+    label: "Events",
+    link: "/events",
+  },
+  {
+    id: "enquiry",
+    label: "Enquiry",
+    link: "/enquiry",
+  },
+  {
+    id: "blog",
+    label: "Blog",
+    link: "/blog",
+  },
+  {
+    id: "shop",
+    label: "Shop",
+    link: "/shop",
+  },
+];
+
 export const data = [
   {
     id: 1,

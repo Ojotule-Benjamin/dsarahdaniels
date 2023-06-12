@@ -10,7 +10,7 @@ const CustomInput: React.FC<ICustomInputProps> = ({
   placeholder,
   className,
 }) => {
-  const inputClassName = `w-full h-14 rounded-sm outline-none pl-5 placeholder:font-playfairDisplay font-normal text-sm text-[#717073]  ${className}`;
+  const inputClassName = `w-full h-14 rounded-sm outline-none p-5 placeholder:font-playfairDisplay font-normal text-sm text-[#717073]  ${className}`;
   return (
     <div className="w-full flex flex-col">
       <label className=" font-playfairDisplay font-normal text-xs text-[#717073] pb-2">

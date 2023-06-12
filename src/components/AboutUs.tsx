@@ -1,12 +1,14 @@
 import React from "react";
 import CustomButton from "./CustomButton";
 import { Link } from "react-router-dom";
+import carousel_1 from "../assets/imgs/carousel_1.png";
 
 const AboutUs = () => {
   return (
-    <div className="w-full h-[563px] bg-[#F0EDE8] gap-8 flex items-center px-16 ">
-      <div className="w-full h-[374px] border">
+    <div className="w-full h-auto xs:h-[563px] gap-4 xs:gap-8 flex flex-1 items-center justify-center flex-col xs:flex-row px-5 xs:px-16 py-5 xs:my-0 bg-secondaryColorLight">
+      <div className="w-full h-[248px] xs:w-[560px] xs:h-[374px] flex items-center justify-center flex-[0.5]">
         {/* TODO: sort out edge cases, alternatives when there is no network */}
+        {/* <img src={carousel_1} alt="" /> */}
         <iframe
           width="560"
           height="374"
@@ -15,15 +17,15 @@ const AboutUs = () => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         ></iframe>
       </div>
-      <div className="flex flex-col items-center gap-4">
-        <h1 className="font-playfairDisplay font-medium text-[#094257] text-4xl text-center">
+      <div className="flex flex-[0.5] flex-col items-center gap-2 xs:gap-4 ">
+        <h1 className="font-playfairDisplay font-medium text-primaryColorBlue text-2xl xs:text-4xl text-center">
           Embark on a Captivating Event Experience
         </h1>
-        <h3 className="font-playfairDisplay font-medium text-[#094257] text-xl text-center">
+        <h3 className="font-playfairDisplay font-medium text-primaryColorBlue text-xs xs:text-xl text-center">
           Dsarah Daniels Events is not just an event planning company, it's a
           creative journey that celebrates your unique story.
         </h3>
-        <p className="font-playfairDisplay font-medium text-[#1A1A1A] text-xs leading-6  text-center">
+        <p className="font-playfairDisplay font-medium text-textColorBlack text-xs leading-4 xs:leading-6  text-center">
           At Dsarah Daniels Events, we understand the power of storytelling and
           the impact it has on evoking emotions and creating lasting memories.
           We strive to create an interactive experience for you and your guests
@@ -35,7 +37,10 @@ const AboutUs = () => {
           to start planning your unforgettable event.
         </p>
         <Link to="/about">
-          <CustomButton text="Learn more" className=" bg-white" />
+          <CustomButton
+            text="Learn more"
+            className=" bg-white w-20 h-5 xs:w-32 xs:h-9 text-[7px] xs:text-sm"
+          />
         </Link>
       </div>
     </div>

@@ -1,5 +1,10 @@
 //types
 
+export interface menuNavItems {
+  id: string;
+  label: string;
+  link: string;
+}
 export interface carouselImagesItems {
   id: number;
   src: string;
@@ -49,6 +54,17 @@ export interface servicesListItems {
 }
 
 //components types
+export type MenuProps = {
+  menuOpen: boolean;
+  setMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+export type NavbarProps = {
+  menuOpen: boolean;
+  setMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  toggleMenu: () => void;
+};
+
 export type MeetCreativeDirectorProps = {
   img: string;
   title?: string;
