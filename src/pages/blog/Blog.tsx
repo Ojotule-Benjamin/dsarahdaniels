@@ -7,6 +7,7 @@ import services_4 from "../../assets/imgs/services_4.png";
 import { posts } from "../../data";
 import { postsItem } from "../../interfaces/global.interface";
 import GetUpdates from "../../components/GetUpdates";
+import { Link } from "react-router-dom";
 
 const Blog = () => {
   return (
@@ -66,12 +67,14 @@ const Blog = () => {
             <p className=" font-playfairDisplay font-semibold text-sm text-textColorBlack  pb-9">
               {item.desc.substring(0, 150)}
             </p>
-            <div className="flex items-center ">
-              <p className=" font-playfairDisplay font-semibold text-sm text-primaryColorBlue">
-                Read more
-              </p>
-              <KeyboardArrowRightIcon />
-            </div>
+            <Link to={"/post"}>
+              <div className="flex items-center ">
+                <p className=" font-playfairDisplay font-semibold text-sm text-primaryColorBlue">
+                  Read more
+                </p>
+                <KeyboardArrowRightIcon />
+              </div>
+            </Link>
           </div>
         ))}
       </div>
