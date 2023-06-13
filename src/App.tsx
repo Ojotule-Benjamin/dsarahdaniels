@@ -19,7 +19,7 @@ const Layout = () => {
     setMenuOpen(!menuOpen);
   };
   return (
-    <div className="relative">
+    <div className="relative ">
       <Navbar
         menuOpen={menuOpen}
         setMenuOpen={setMenuOpen}
@@ -80,7 +80,7 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <div className="w-screen h-screen overflow-y-auto">
+    <div className="w-screen h-screen overflow-y-auto overflow-x-hidden">
       <RouterProvider router={router} />
     </div>
   );

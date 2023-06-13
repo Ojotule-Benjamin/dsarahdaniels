@@ -53,6 +53,13 @@ export interface servicesListItems {
   servicesRendered?: string[];
 }
 
+export interface postsItem {
+  id: number;
+  title: string;
+  img: string;
+  desc: string;
+}
+
 //components types
 export type MenuProps = {
   menuOpen: boolean;
