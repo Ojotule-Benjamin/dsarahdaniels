@@ -56,7 +56,8 @@ export interface servicesListItems {
 export interface postsItem {
   id: number;
   title: string;
-  img: string;
+  postImg: string;
+  postImages: string[];
   desc: string;
 }
 
