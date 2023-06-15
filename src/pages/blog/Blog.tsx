@@ -7,9 +7,15 @@ import services_4 from "../../assets/imgs/services_4.png";
 import { posts } from "../../data";
 import { postsItem } from "../../interfaces/global.interface";
 import GetUpdates from "../../components/GetUpdates";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Blog = () => {
+  const navigate = useNavigate();
+
+  const handleNavigate = (id: string, item: postsItem) => {
+    navigate(`/blog/blogPost/${id}`, { state: { item } });
+  };
+
   return (
     <div className=" ">
       <Header header="Blog" />
@@ -41,7 +47,7 @@ const Blog = () => {
           >
             <div className="w-full h-[278px]">
               <img
-                src={item.img}
+                src={item.postImg}
                 alt=""
                 className=" h-full rounded-3xl object-cover"
               />
@@ -67,14 +73,16 @@ const Blog = () => {
             <p className=" font-playfairDisplay font-semibold text-sm text-textColorBlack  pb-9">
               {item.desc.substring(0, 150)}
             </p>
-            <Link to={"/post"}>
-              <div className="flex items-center ">
-                <p className=" font-playfairDisplay font-semibold text-sm text-primaryColorBlue">
-                  Read more
-                </p>
-                <KeyboardArrowRightIcon />
-              </div>
-            </Link>
+
+            <div
+              className="flex items-center "
+              onClick={() => handleNavigate(`${item.id}`, item)}
+            >
+              <p className=" font-playfairDisplay font-semibold text-sm text-primaryColorBlue">
+                Read more
+              </p>
+              <KeyboardArrowRightIcon />
+            </div>
           </div>
         ))}
       </div>
