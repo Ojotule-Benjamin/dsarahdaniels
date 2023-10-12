@@ -67,18 +67,18 @@ const Blog = () => {
               </div>
             </div>
 
-            <h4 className=" font-playfairDisplay font-semibold text-xl text-primaryColorBlue">
+            <h4 className=" font-playfairDisplay font-semibold text-xl text-primaryColorBlue overflow-hidden line-clamp-2">
               {item.title}
             </h4>
-            <p className=" font-playfairDisplay font-semibold text-sm text-textColorBlack  pb-9">
-              {item.desc.substring(0, 150)}
+            <p className="w-full h-auto font-playfairDisplay font-semibold text-sm text-textColorBlack mb-4 overflow-hidden line-clamp-5">
+              {item.desc}
             </p>
 
             <div
               className="flex items-center "
               onClick={() => handleNavigate(`${item.id}`, item)}
             >
-              <p className=" font-playfairDisplay font-semibold text-sm text-primaryColorBlue">
+              <p className=" font-playfairDisplay font-semibold text-sm text-primaryColorBlue ">
                 Read more
               </p>
               <KeyboardArrowRightIcon />

@@ -29,14 +29,14 @@ export const menuNav = [
     label: "Blog",
     link: "/blog",
   },
-  {
-    id: "shop",
-    label: "Shop",
-    link: "/shop",
-  },
+  // {
+  //   id: "shop",
+  //   label: "Shop",
+  //   link: "/shop",
+  // },
 ];
 
-export const data = [
+export const formData = [
   {
     id: 1,
     type: "text",
@@ -62,7 +62,7 @@ export const data = [
     id: 4,
     type: "tel",
     name: "phoneNumber",
-    label: "Phone Number*",
+    label: "Phone Number *",
     placeholder: "Enter phone number",
   },
   {
@@ -77,7 +77,7 @@ export const data = [
     type: "number",
     name: "budget",
     label: "Event Budget *",
-    placeholder: "Enter budget",
+    placeholder: "Enter budget eg 300000",
   },
   {
     id: 7,

@@ -86,6 +86,17 @@ export type MeetCreativeDirectorProps = {
 export type CarouselSectionProps = {
   carouselImages: carouselImagesItems[];
 };
+
+export interface IEventDetailsProps {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phoneNumber: number | null;
+  dateOfEvent: number | null;
+  budget: number | string;
+  cityOfEvent: string;
+  countryOfEvent: string;
+}
 export interface IGetUpdatesProps {
   firstName: string;
   lastName: string;

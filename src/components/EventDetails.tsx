@@ -1,12 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
 import CustomInput from "./CustomInput";
 import CustomButton from "./CustomButton";
-import { data } from "../../src/data";
+import { formData } from "../../src/data";
+import { IEventDetailsProps } from "../interfaces/global.interface";
 
 const EventDetails = () => {
-  const handleChange = () => {
-    console.log("text");
+  const [inputValues, setInputValues] = useState<IEventDetailsProps>({
+    firstName: "",
+    lastName: "",
+    email: "",
+    //phoneNumber: 0,
+    phoneNumber: null,
+    dateOfEvent: 0,
+    budget: "",
+    cityOfEvent: "",
+    countryOfEvent: "",
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setInputValues((prevValues) => ({
+      ...prevValues,
+      [e.target.name]: e.target.value,
+    }));
   };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Perform any necessary form submission logic here
+    // For example, you can access the form data using the `inputValues` state
+    //console.log(inputValues);
+    console.log("test");
+  };
+
+  // const handleSubmit = () => {
+  //   //e.preventDefault();
+  //   console.log(inputValues);
+  // };
 
   return (
     <div className="flex flex-col items-center justify-center px-5 xs:px-0 xs:pt-10 ">
@@ -29,12 +58,17 @@ const EventDetails = () => {
           Please Provide Us With Some Information About Yourself?
         </h3>
 
-        {data.map((item, index) => (
+        {formData.map((item, index) => (
           <div className="w-full xs:px-20" key={index}>
             <CustomInput
               type={item.type}
               name={item.name}
-              value=""
+              value={
+                String(inputValues[item.name as keyof IEventDetailsProps]) || ""
+              }
+              //value={inputValues[item.name as keyof IEventDetailsProps] || ""}
+              //value={inputValues[item.name]}
+              //value={inputValues[item.name as keyof IEventDetailsProps]}
               onChange={handleChange}
               label={item.label}
               placeholder={item.placeholder}
@@ -52,6 +86,7 @@ const EventDetails = () => {
 
         <CustomButton
           text="Submit"
+          onClick={() => handleSubmit}
           className=" xs:w-96 xs:h-14 border border-borderColor rounded-sm my-3 xs:my-10"
         />
       </form>

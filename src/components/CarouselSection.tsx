@@ -23,6 +23,8 @@ const CarouselSection: React.FC<CarouselSectionProps> = ({
           >
             {carouselImages.map((item, index) => (
               <img
+                sizes="85"
+                loading="lazy"
                 key={index}
                 src={item.src}
                 alt=""
