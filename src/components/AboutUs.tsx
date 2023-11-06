@@ -5,7 +5,7 @@ import carousel_1 from "../assets/imgs/carousel_1.png";
 
 const AboutUs = () => {
   return (
-    <div className="w-full h-auto xs:h-[563px] gap-4 xs:gap-8 flex flex-1 items-center justify-center flex-col xs:flex-row px-5 xs:px-16 py-5 xs:my-0 bg-secondaryColorLight">
+    <div className="w-full h-auto xs:h-full gap-4 xs:gap-8 flex flex-1 items-center justify-center flex-col lg:flex-row px-5 xs:px-16 py-10 lg:py-16 bg-secondaryColorLight">
       <div className="w-full h-[248px] xs:w-[560px] xs:h-[374px] flex items-center justify-center flex-[0.5]">
         {/* TODO: sort out edge cases, alternatives when there is no network */}
         {/* <img src={carousel_1} alt="" /> */}
@@ -21,11 +21,11 @@ const AboutUs = () => {
         <h1 className="font-playfairDisplay font-medium text-primaryColorBlue text-2xl xs:text-4xl text-center">
           Embark on a Captivating Event Experience
         </h1>
-        <h3 className="font-playfairDisplay font-medium text-primaryColorBlue text-xs xs:text-xl text-center">
+        <h3 className="font-playfairDisplay font-medium text-primaryColorBlue text-sm xs:text-xl text-center">
           Dsarah Daniels Events is not just an event planning company, it's a
           creative journey that celebrates your unique story.
         </h3>
-        <p className="font-playfairDisplay font-medium text-textColorBlack text-xs leading-4 xs:leading-6  text-center">
+        <p className="font-playfairDisplay font-medium text-textColorBlack text-base text-center">
           At Dsarah Daniels Events, we understand the power of storytelling and
           the impact it has on evoking emotions and creating lasting memories.
           We strive to create an interactive experience for you and your guests

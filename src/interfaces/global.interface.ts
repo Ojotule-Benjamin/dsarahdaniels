@@ -78,7 +78,7 @@ export type MeetCreativeDirectorProps = {
   title?: string;
   desc: string;
   subTitle?: string;
-  button: React.ReactElement<ICustomButton> | null;
+  button?: React.ReactElement<ICustomButton> | null;
   generalClassName?: string;
   descClassName?: string;
 };

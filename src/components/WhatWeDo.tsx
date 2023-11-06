@@ -18,26 +18,28 @@ const WhatWeDo = () => {
     },
   ];
   return (
-    <div className="mt-28">
+    <div className=" w-full h-full flex flex-col gap-5 mt-20 mb-10">
       {whatWeDo.map((item, index) => (
         <div
           key={index}
-          className={`w-full flex flex-1 items-center gap-10 justify-center py-5 px-16 ${
-            index % 2 === 1 ? "flex-row-reverse" : "flex-row"
+          className={`w-full h-auto flex-col flex flex-1 items-center gap-4 lg:gap-10 justify-center px-4 lg:px-16 ${
+            index % 2 === 1 ? "lg:flex-row-reverse" : "lg:flex-row "
           }`}
         >
-          <div className=" w-full flex-[0.5] h-[500px]" key={index}>
+          <div className="w-full h-96 flex items-center justify-center flex-1">
             <img
               src={item.imgs}
               alt={item.title}
-              className=" w-full h-full object-cover"
+              className=" w-72 h-72 md:w-96 md:h-96 lg:w-full lg:h-full object-cover object-center"
             />
+
+            {/* <h1 className="w-full h-full">hello</h1> */}
           </div>
-          <div className="flex flex-[0.5] flex-col gap-4">
-            <h3 className=" text-primaryColorBlue font-playfairDisplay font-medium text-5xl text-center">
+          <div className="w-full flex flex-1 flex-col">
+            <h3 className=" text-primaryColorBlue font-playfairDisplay font-medium text-xl md:text-2xl lg:text-5xl text-center">
               {item.title}
             </h3>
-            <p className=" font-playfairDisplay font-normal text-base text-textColorBlack text-justify">
+            <p className=" font-playfairDisplay font-normal text-sm lg:text-base text-textColorBlack text-center lg:text-justify p-4">
               {item.desc}
             </p>
             <div className="flex items-center justify-center">

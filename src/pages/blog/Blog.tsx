@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../../components/Header";
 import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
 import CommentOutlinedIcon from "@mui/icons-material/CommentOutlined";
@@ -8,9 +8,39 @@ import { posts } from "../../data";
 import { postsItem } from "../../interfaces/global.interface";
 import GetUpdates from "../../components/GetUpdates";
 import { Link, useNavigate } from "react-router-dom";
+import { error } from "console";
+
+interface Post {
+  userId: number;
+  id: number;
+  title: string;
+  body: string;
+}
 
 const Blog = () => {
   const navigate = useNavigate();
+  // const [posts, setPosts] = useState<Post[]>([]);
+
+  // useEffect(() => {
+  //   const getPosts = async () => {
+  //     try {
+  //       const response = await fetch(
+  //         "https://jsonplaceholder.typicode.com/posts",
+  //         {
+  //           method: "GET",
+  //         }
+  //       );
+  //       if (!response.ok) {
+  //         throw new Error(`HTTP error! Status: ${response.status}`);
+  //       }
+  //       const data: Post[] = await response.json();
+  //       setPosts(data);
+  //     } catch (error) {
+  //       console.log("Failed to fetch data", error);
+  //     }
+  //   };
+  //   getPosts();
+  // }, []);
 
   const handleNavigate = (id: string, item: postsItem) => {
     navigate(`/blog/blogPost/${id}`, { state: { item } });
@@ -39,7 +69,7 @@ const Blog = () => {
       </h3>
 
       {/* posts */}
-      <div className=" w-full px-16 flex items-center justify-between gap-5 flex-wrap py-5 shadow-2xl">
+      <div className=" w-full px-16 flex items-center justify-between gap-5 flex-wrap py-5 shadow-2xl ">
         {posts.map((item: postsItem, index: number) => (
           <div
             key={index}
