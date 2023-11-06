@@ -54,6 +54,7 @@ const Home = () => {
         planning and design, and let's create unforgettable memories together"
         title="Meet Our Creative Director"
         subTitle="Sarah Daniels"
+        generalClassName=" h-96 lg:h-[365px] gap-2 lg:gap-2  p-4 lg:p-8"
         button={
           <CustomButton
             text="Connect"

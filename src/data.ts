@@ -29,14 +29,14 @@ export const menuNav = [
     label: "Blog",
     link: "/blog",
   },
-  {
-    id: "shop",
-    label: "Shop",
-    link: "/shop",
-  },
+  // {
+  //   id: "shop",
+  //   label: "Shop",
+  //   link: "/shop",
+  // },
 ];
 
-export const data = [
+export const formData = [
   {
     id: 1,
     type: "text",
@@ -62,7 +62,7 @@ export const data = [
     id: 4,
     type: "tel",
     name: "phoneNumber",
-    label: "Phone Number*",
+    label: "Phone Number *",
     placeholder: "Enter phone number",
   },
   {
@@ -77,7 +77,7 @@ export const data = [
     type: "number",
     name: "budget",
     label: "Event Budget *",
-    placeholder: "Enter budget",
+    placeholder: "Enter budget eg 300000",
   },
   {
     id: 7,
@@ -254,7 +254,12 @@ export const posts = [
   {
     id: 1,
     title: "Top 5 Marvels of Wedding Florals: Unveiling Nature's Delight",
-    img: require("./assets/imgs/post_1.png"),
+    postImg: require("./assets/imgs/post_1.png"),
+    postImages: [
+      require("./assets/imgs/post_10.png"),
+      require("./assets/imgs/post_11.png"),
+      require("./assets/imgs/post_12.png"),
+    ],
     desc: `When it comes to wedding celebrations, the enchanting touch of florals has an undeniable impact. These delicate blooms have the power to transform any venue into a whimsical paradise, evoking emotions and adding an extra layer of elegance to the occasion. Join us as we explore the top five marvels of wedding florals that make them an essential element of every unforgettable celebration.
     Blooming Expressions of Love: Flowers, in all their natural splendor, symbolize love, beauty, and new beginnings. Each petal carefully chosen and arranged speaks volumes, conveying heartfelt emotions and creating an atmosphere of romance and joy. From the vibrant bursts of color to the gentle fragrance that fills the air, wedding florals effortlessly capture the essence of love and celebration.
     Setting the Scene: Whether it's an intimate garden ceremony or a grand ballroom affair, the right floral arrangements can transform any space into a breathtaking setting. From cascading floral arches to elegantly adorned centerpieces, wedding florals create a visual masterpiece that sets the tone and creates an unforgettable backdrop for the couple's special day.
@@ -266,8 +271,14 @@ export const posts = [
   },
   {
     id: 2,
-    title: "Top 5 Marvels of Wedding Florals: Unveiling Nature's Delight",
-    img: require("./assets/imgs/post_2.png"),
+    title:
+      "Insights About Being an Event Manager: Unlocking the World of Experiences",
+    postImg: require("./assets/imgs/post_2.png"),
+    postImages: [
+      require("./assets/imgs/post_10.png"),
+      require("./assets/imgs/post_11.png"),
+      require("./assets/imgs/post_12.png"),
+    ],
     desc: `When it comes to wedding celebrations, the enchanting touch of florals has an undeniable impact. These delicate blooms have the power to transform any venue into a whimsical paradise, evoking emotions and adding an extra layer of elegance to the occasion. Join us as we explore the top five marvels of wedding florals that make them an essential element of every unforgettable celebration.
     Blooming Expressions of Love: Flowers, in all their natural splendor, symbolize love, beauty, and new beginnings. Each petal carefully chosen and arranged speaks volumes, conveying heartfelt emotions and creating an atmosphere of romance and joy. From the vibrant bursts of color to the gentle fragrance that fills the air, wedding florals effortlessly capture the essence of love and celebration.
     Setting the Scene: Whether it's an intimate garden ceremony or a grand ballroom affair, the right floral arrangements can transform any space into a breathtaking setting. From cascading floral arches to elegantly adorned centerpieces, wedding florals create a visual masterpiece that sets the tone and creates an unforgettable backdrop for the couple's special day.
@@ -279,8 +290,14 @@ export const posts = [
   },
   {
     id: 3,
-    title: "Top 5 Marvels of Wedding Florals: Unveiling Nature's Delight",
-    img: require("./assets/imgs/post_3.png"),
+    title:
+      "Picking Out the Perfect Shoes for Your Wedding: Stepping into Style and Comfort",
+    postImg: require("./assets/imgs/post_3.png"),
+    postImages: [
+      require("./assets/imgs/post_10.png"),
+      require("./assets/imgs/post_11.png"),
+      require("./assets/imgs/post_12.png"),
+    ],
     desc: `When it comes to wedding celebrations, the enchanting touch of florals has an undeniable impact. These delicate blooms have the power to transform any venue into a whimsical paradise, evoking emotions and adding an extra layer of elegance to the occasion. Join us as we explore the top five marvels of wedding florals that make them an essential element of every unforgettable celebration.
     Blooming Expressions of Love: Flowers, in all their natural splendor, symbolize love, beauty, and new beginnings. Each petal carefully chosen and arranged speaks volumes, conveying heartfelt emotions and creating an atmosphere of romance and joy. From the vibrant bursts of color to the gentle fragrance that fills the air, wedding florals effortlessly capture the essence of love and celebration.
     Setting the Scene: Whether it's an intimate garden ceremony or a grand ballroom affair, the right floral arrangements can transform any space into a breathtaking setting. From cascading floral arches to elegantly adorned centerpieces, wedding florals create a visual masterpiece that sets the tone and creates an unforgettable backdrop for the couple's special day.
@@ -292,8 +309,14 @@ export const posts = [
   },
   {
     id: 4,
-    title: "Top 5 Marvels of Wedding Florals: Unveiling Nature's Delight",
-    img: require("./assets/imgs/post_4.png"),
+    title:
+      "Top 5 Insights About Bridal Bouquets: A Blooming Expression of Love and Style",
+    postImg: require("./assets/imgs/post_4.png"),
+    postImages: [
+      require("./assets/imgs/post_10.png"),
+      require("./assets/imgs/post_11.png"),
+      require("./assets/imgs/post_12.png"),
+    ],
     desc: `When it comes to wedding celebrations, the enchanting touch of florals has an undeniable impact. These delicate blooms have the power to transform any venue into a whimsical paradise, evoking emotions and adding an extra layer of elegance to the occasion. Join us as we explore the top five marvels of wedding florals that make them an essential element of every unforgettable celebration.
     Blooming Expressions of Love: Flowers, in all their natural splendor, symbolize love, beauty, and new beginnings. Each petal carefully chosen and arranged speaks volumes, conveying heartfelt emotions and creating an atmosphere of romance and joy. From the vibrant bursts of color to the gentle fragrance that fills the air, wedding florals effortlessly capture the essence of love and celebration.
     Setting the Scene: Whether it's an intimate garden ceremony or a grand ballroom affair, the right floral arrangements can transform any space into a breathtaking setting. From cascading floral arches to elegantly adorned centerpieces, wedding florals create a visual masterpiece that sets the tone and creates an unforgettable backdrop for the couple's special day.
@@ -305,8 +328,13 @@ export const posts = [
   },
   {
     id: 5,
-    title: "Top 5 Marvels of Wedding Florals: Unveiling Nature's Delight",
-    img: require("./assets/imgs/post_5.png"),
+    title: "Unveiling the Perfect Dress for Your Dream Wedding",
+    postImg: require("./assets/imgs/post_5.png"),
+    postImages: [
+      require("./assets/imgs/post_10.png"),
+      require("./assets/imgs/post_11.png"),
+      require("./assets/imgs/post_12.png"),
+    ],
     desc: `When it comes to wedding celebrations, the enchanting touch of florals has an undeniable impact. These delicate blooms have the power to transform any venue into a whimsical paradise, evoking emotions and adding an extra layer of elegance to the occasion. Join us as we explore the top five marvels of wedding florals that make them an essential element of every unforgettable celebration.
     Blooming Expressions of Love: Flowers, in all their natural splendor, symbolize love, beauty, and new beginnings. Each petal carefully chosen and arranged speaks volumes, conveying heartfelt emotions and creating an atmosphere of romance and joy. From the vibrant bursts of color to the gentle fragrance that fills the air, wedding florals effortlessly capture the essence of love and celebration.
     Setting the Scene: Whether it's an intimate garden ceremony or a grand ballroom affair, the right floral arrangements can transform any space into a breathtaking setting. From cascading floral arches to elegantly adorned centerpieces, wedding florals create a visual masterpiece that sets the tone and creates an unforgettable backdrop for the couple's special day.
@@ -318,8 +346,13 @@ export const posts = [
   },
   {
     id: 6,
-    title: "Top 5 Marvels of Wedding Florals: Unveiling Nature's Delight",
-    img: require("./assets/imgs/post_6.png"),
+    title: "Transforming Your Wedding Venue into a Dazzling Paradise",
+    postImg: require("./assets/imgs/post_6.png"),
+    postImages: [
+      require("./assets/imgs/post_10.png"),
+      require("./assets/imgs/post_11.png"),
+      require("./assets/imgs/post_12.png"),
+    ],
     desc: `When it comes to wedding celebrations, the enchanting touch of florals has an undeniable impact. These delicate blooms have the power to transform any venue into a whimsical paradise, evoking emotions and adding an extra layer of elegance to the occasion. Join us as we explore the top five marvels of wedding florals that make them an essential element of every unforgettable celebration.
     Blooming Expressions of Love: Flowers, in all their natural splendor, symbolize love, beauty, and new beginnings. Each petal carefully chosen and arranged speaks volumes, conveying heartfelt emotions and creating an atmosphere of romance and joy. From the vibrant bursts of color to the gentle fragrance that fills the air, wedding florals effortlessly capture the essence of love and celebration.
     Setting the Scene: Whether it's an intimate garden ceremony or a grand ballroom affair, the right floral arrangements can transform any space into a breathtaking setting. From cascading floral arches to elegantly adorned centerpieces, wedding florals create a visual masterpiece that sets the tone and creates an unforgettable backdrop for the couple's special day.
@@ -331,8 +364,13 @@ export const posts = [
   },
   {
     id: 7,
-    title: "Top 5 Marvels of Wedding Florals: Unveiling Nature's Delight",
-    img: require("./assets/imgs/post_7.png"),
+    title: "Elevating the Groom's Squad to Wedding Superstars",
+    postImg: require("./assets/imgs/post_7.png"),
+    postImages: [
+      require("./assets/imgs/post_10.png"),
+      require("./assets/imgs/post_11.png"),
+      require("./assets/imgs/post_12.png"),
+    ],
     desc: `When it comes to wedding celebrations, the enchanting touch of florals has an undeniable impact. These delicate blooms have the power to transform any venue into a whimsical paradise, evoking emotions and adding an extra layer of elegance to the occasion. Join us as we explore the top five marvels of wedding florals that make them an essential element of every unforgettable celebration.
     Blooming Expressions of Love: Flowers, in all their natural splendor, symbolize love, beauty, and new beginnings. Each petal carefully chosen and arranged speaks volumes, conveying heartfelt emotions and creating an atmosphere of romance and joy. From the vibrant bursts of color to the gentle fragrance that fills the air, wedding florals effortlessly capture the essence of love and celebration.
     Setting the Scene: Whether it's an intimate garden ceremony or a grand ballroom affair, the right floral arrangements can transform any space into a breathtaking setting. From cascading floral arches to elegantly adorned centerpieces, wedding florals create a visual masterpiece that sets the tone and creates an unforgettable backdrop for the couple's special day.
@@ -344,8 +382,14 @@ export const posts = [
   },
   {
     id: 8,
-    title: "Top 5 Marvels of Wedding Florals: Unveiling Nature's Delight",
-    img: require("./assets/imgs/post_8.png"),
+    title:
+      "Choosing the Right Color Theme for Your Event: Infusing Vibrance and Elegance into Every Detail",
+    postImg: require("./assets/imgs/post_8.png"),
+    postImages: [
+      require("./assets/imgs/post_10.png"),
+      require("./assets/imgs/post_11.png"),
+      require("./assets/imgs/post_12.png"),
+    ],
     desc: `When it comes to wedding celebrations, the enchanting touch of florals has an undeniable impact. These delicate blooms have the power to transform any venue into a whimsical paradise, evoking emotions and adding an extra layer of elegance to the occasion. Join us as we explore the top five marvels of wedding florals that make them an essential element of every unforgettable celebration.
     Blooming Expressions of Love: Flowers, in all their natural splendor, symbolize love, beauty, and new beginnings. Each petal carefully chosen and arranged speaks volumes, conveying heartfelt emotions and creating an atmosphere of romance and joy. From the vibrant bursts of color to the gentle fragrance that fills the air, wedding florals effortlessly capture the essence of love and celebration.
     Setting the Scene: Whether it's an intimate garden ceremony or a grand ballroom affair, the right floral arrangements can transform any space into a breathtaking setting. From cascading floral arches to elegantly adorned centerpieces, wedding florals create a visual masterpiece that sets the tone and creates an unforgettable backdrop for the couple's special day.
@@ -357,8 +401,13 @@ export const posts = [
   },
   {
     id: 9,
-    title: "Top 5 Marvels of Wedding Florals: Unveiling Nature's Delight",
-    img: require("./assets/imgs/post_9.png"),
+    title: "Top 5 Insights About Bridesmaids: Celebrating Sisterhood and Style",
+    postImg: require("./assets/imgs/post_9.png"),
+    postImages: [
+      require("./assets/imgs/post_10.png"),
+      require("./assets/imgs/post_11.png"),
+      require("./assets/imgs/post_12.png"),
+    ],
     desc: `When it comes to wedding celebrations, the enchanting touch of florals has an undeniable impact. These delicate blooms have the power to transform any venue into a whimsical paradise, evoking emotions and adding an extra layer of elegance to the occasion. Join us as we explore the top five marvels of wedding florals that make them an essential element of every unforgettable celebration.
     Blooming Expressions of Love: Flowers, in all their natural splendor, symbolize love, beauty, and new beginnings. Each petal carefully chosen and arranged speaks volumes, conveying heartfelt emotions and creating an atmosphere of romance and joy. From the vibrant bursts of color to the gentle fragrance that fills the air, wedding florals effortlessly capture the essence of love and celebration.
     Setting the Scene: Whether it's an intimate garden ceremony or a grand ballroom affair, the right floral arrangements can transform any space into a breathtaking setting. From cascading floral arches to elegantly adorned centerpieces, wedding florals create a visual masterpiece that sets the tone and creates an unforgettable backdrop for the couple's special day.

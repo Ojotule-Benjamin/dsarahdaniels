@@ -12,7 +12,7 @@ import Navbar from "./components/Navbar";
 import Gallery from "./pages/gallery/Gallery";
 import Service from "./pages/service/Service";
 import MenuNav from "./components/MenuNav";
-import Post from "./pages/post/Post";
+import BlogPost from "./pages/post/BlogPost";
 
 const Layout = () => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
@@ -72,8 +72,8 @@ const router = createBrowserRouter([
         element: <Blog />,
       },
       {
-        path: "/post",
-        element: <Post />,
+        path: "/blog/blogPost/:data",
+        element: <BlogPost />,
       },
       {
         path: "/shop",

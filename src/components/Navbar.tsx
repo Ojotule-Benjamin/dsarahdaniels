@@ -62,7 +62,7 @@ const Navbar: React.FC<NavbarProps> = ({
   // ];
 
   return (
-    <div className="w-full h-24 xs:h-36 flex  items-center  justify-between px-5 xs:px-16">
+    <div className="w-full border-b-2 h-24 xs:h-36 flex  items-center  justify-between px-5 xs:px-16">
       <div className=" w-32 h-24 xs:w-56 xs:h-36 flex items-center justify-center ">
         <img
           src={Logo}

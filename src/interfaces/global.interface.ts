@@ -56,7 +56,8 @@ export interface servicesListItems {
 export interface postsItem {
   id: number;
   title: string;
-  img: string;
+  postImg: string;
+  postImages: string[];
   desc: string;
 }
 
@@ -77,7 +78,7 @@ export type MeetCreativeDirectorProps = {
   title?: string;
   desc: string;
   subTitle?: string;
-  button: React.ReactElement<ICustomButton> | null;
+  button?: React.ReactElement<ICustomButton> | null;
   generalClassName?: string;
   descClassName?: string;
 };
@@ -85,6 +86,17 @@ export type MeetCreativeDirectorProps = {
 export type CarouselSectionProps = {
   carouselImages: carouselImagesItems[];
 };
+
+export interface IEventDetailsProps {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phoneNumber: number | null;
+  dateOfEvent: number | null;
+  budget: number | string;
+  cityOfEvent: string;
+  countryOfEvent: string;
+}
 export interface IGetUpdatesProps {
   firstName: string;
   lastName: string;
