@@ -164,7 +164,7 @@ const About = () => {
         >
           <div className="w-full h-full flex items-center justify-center gap-4">
             {howWeWorkImgs.map((item, index) => (
-              <div className=" h-80 p-0" key={index}>
+              <div className=" h-80 p-0 horizontal-scrolling-items" key={index}>
                 <img
                   src={item.src}
                   alt={item.alt}
