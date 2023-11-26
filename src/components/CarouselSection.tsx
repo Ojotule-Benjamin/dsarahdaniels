@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { CarouselSectionProps } from "../interfaces/global.interface";
 import { Swiper } from "swiper/react";
 
@@ -7,6 +7,19 @@ import "../App.css";
 const CarouselSection: React.FC<CarouselSectionProps> = ({
   carouselImages,
 }) => {
+  const [currentImage, setCurrentImage] = useState<number>(0);
+
+  useEffect(() => {
+    const interval = setInterval(
+      () =>
+        setCurrentImage((prev) =>
+          prev === carouselImages.length - 1 ? 0 : prev + 1
+        ),
+      5000
+    );
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div
       className="w-full "

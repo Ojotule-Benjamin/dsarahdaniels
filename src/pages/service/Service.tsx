@@ -10,28 +10,31 @@ const Service = () => {
     <div>
       {item && (
         <div className=" ">
-          <Header header={item.service} className=" text-5xl" />
-          <div className="px-16 flex flex-col items-center justify-center">
-            <div className=" w-full h-[568px] bg-red-600 mb-10">
+          <Header
+            header={item.service}
+            className="w-full h-12 lg:h-24 flex items-center justify-center font-playfairDisplay font-normal text-xl md:text-2xl lg:text-5xl text-primaryColorBlue"
+          />
+          <div className=" flex flex-col items-center justify-center">
+            <div className=" w-full h-auto bg-red-600 mb-10">
               <img
                 src={item.img}
                 alt=""
                 className="w-full  object-cover pb-10"
               />
             </div>
-            <div>
-              <p className=" font-playfairDisplay font-medium text-xl text-textColorDarkGray text-justify">
+            <div className=" px-16">
+              <p className=" font-playfairDisplay font-medium text-base text-textColorDarkGray text-justify">
                 {item.desc}
               </p>
-              <h3 className=" font-playfairDisplay font-medium text-3xl text-primaryColorBlue text-center py-10">
-                Services Rendered
-              </h3>
             </div>
-            <div className="flex flex-wrap justify-center mb-10">
+            <h3 className=" font-playfairDisplay font-medium text-3xl text-primaryColorBlue text-center py-10">
+              Services Rendered
+            </h3>
+            <div className="w-3/5 h-96 flex flex-col flex-wrap justify-center mb-10 relative">
               {item.servicesRendered.map((service: string, index: number) => (
                 <div
                   key={index}
-                  className=" font-playfairDisplay font-medium text-base text-textColorDarkGray border border-primaryColorBlue bg-secondaryColorLight rounded-lg m-2 px-4 py-2"
+                  className="w-fit flex items-center justify-center flex-row font-playfairDisplay font-medium text-base text-textColorDarkGray border border-primaryColorBlue bg-secondaryColorLight rounded-lg m-2 px-4 py-2"
                 >
                   {index + 1}. {service}
                 </div>

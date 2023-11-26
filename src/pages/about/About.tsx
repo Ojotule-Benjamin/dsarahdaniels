@@ -88,8 +88,8 @@ const About = () => {
       <CarouselSection carouselImages={aboutCarouselImgs} />
 
       <WhatWeDo />
-      <div className="hidden md:flex w-full p-0 lg:p-16 my-0">
-        <p className=" w-full h-auto bg-secondaryColorLight p-4 lg:p-10 flex items-center justify-center font-playfairDisplay font-semibold text-primaryColorBlue text-lg text-center">
+      <div className="hidden md:flex w-full p-0 md:p-16 my-0">
+        <p className=" w-full h-80 bg-secondaryColorLight p-4 lg:p-10 flex items-center justify-center font-playfairDisplay font-semibold text-primaryColorBlue text-base text-center">
           At Dsarah Daniels, we pride ourselves on having a team of talented and
           experienced event professionals who are passionate about making your
           event a success. Our team includes event coordinators, designers,
@@ -123,7 +123,7 @@ const About = () => {
 
       {/* how we work */}
       <div className=" w-full h-full lg:py-5 ">
-        <div className="w-full flex flex-col items-center justify-center px-8 lg:px-16">
+        <div className="w-full flex flex-col items-center justify-center px-8 md:px-16">
           <h1 className=" font-playfairDisplay font-medium text-2xl lg:text-5xl text-primaryColorBlue text-center mb-5">
             How Dsarah Daniels Team Works
           </h1>

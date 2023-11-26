@@ -12,7 +12,7 @@ const MeetCreativeDirector: React.FC<MeetCreativeDirectorProps> = ({
 }) => {
   return (
     <div
-      className={`w-full h-auto bg-white md:flex-col lg:flex-row flex items-center justify-center flex-col my-10 xs:flex-row px-0 lg:px-16`}
+      className={`w-full h-auto bg-white md:flex-col lg:flex-row flex items-center justify-center flex-col my-10 xs:flex-row px-0 md:px-16`}
     >
       {/* right */}
       <div className=" w-full lg:w-1/2 h-full flex items-center justify-center z-20">
