@@ -1,18 +1,32 @@
 import React, { useState, useEffect } from "react";
-import { CarouselSectionProps } from "../interfaces/global.interface";
+// import { CarouselSectionProps } from "../interfaces/global.interface";
 import { Swiper } from "swiper/react";
-
+import hero1 from "../assets/svgs/hero1.svg";
+import hero2 from "../assets/svgs/hero2.svg";
 import "../App.css";
 
-const CarouselSection: React.FC<CarouselSectionProps> = ({
-  carouselImages,
-}) => {
-  const [currentImage, setCurrentImage] = useState<number>(0);
+const carouselImages = [
+  {
+    id: 0,
+    img: hero1,
+  },
+  {
+    id: 1,
+    img: hero2,
+  },
+];
+
+type CarouselSectionProps = {
+  id: number;
+  img: string;
+};
+const CarouselSection: React.FC<CarouselSectionProps> = () => {
+  const [currentImgSlide, setCurrentImgSlide] = useState<number>(0);
 
   useEffect(() => {
     const interval = setInterval(
       () =>
-        setCurrentImage((prev) =>
+        setCurrentImgSlide((prev) =>
           prev === carouselImages.length - 1 ? 0 : prev + 1
         ),
       5000
@@ -25,28 +39,17 @@ const CarouselSection: React.FC<CarouselSectionProps> = ({
       className="w-full "
       //style={{ height: "calc(100vh - 144px)" }}
     >
-      <div className="w-full flex items-center relative">
-        {carouselImages.length > 0 ? (
-          <Swiper
-            spaceBetween={50}
-            slidesPerView={2}
-            className="w-full swiper"
-            //style={{ height: "calc(100vh - 144px)" }}
-          >
-            {carouselImages.map((item, index) => (
-              <img
-                sizes="85"
-                loading="lazy"
-                key={index}
-                src={item.src}
-                alt=""
-                className="w-full object-contain xs:object-cover md:h-[calc(100vh/2)] lg:h-[calc(100vh-144px)]"
-                //className={`w-full object-contain xs:object-cover `}
-                //style={{ height: "calc(100vh - 144px" }}
-              />
-            ))}
-          </Swiper>
-        ) : null}
+      <div className="w-full flex items-center ">
+        <img src={hero1} alt="" />
+        {/* <img
+          sizes="85"
+          loading="lazy"
+          src={carouselImages[currentImgSlide].img}
+          alt=""
+          className="w-full object-contain xs:object-cover md:h-[calc(100vh/2)] lg:h-[calc(100vh-144px)]"
+          //className={`w-full object-contain xs:object-cover `}
+          //style={{ height: "calc(100vh - 144px" }}
+        /> */}
       </div>
     </div>
   );

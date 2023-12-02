@@ -85,7 +85,7 @@ const About = () => {
         header="About Us And We Do"
         className="w-full h-12 lg:h-24 flex items-center justify-center font-playfairDisplay font-normal text-xl md:text-2xl lg:text-5xl text-primaryColorBlue"
       />
-      <CarouselSection carouselImages={aboutCarouselImgs} />
+      {/* <CarouselSection carouselImages={aboutCarouselImgs} /> */}
 
       <WhatWeDo />
       <div className="hidden md:flex w-full p-0 md:p-16 my-0">

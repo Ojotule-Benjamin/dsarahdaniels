@@ -11,23 +11,13 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Gallery from "./pages/gallery/Gallery";
 import Service from "./pages/service/Service";
-import MenuNav from "./components/MenuNav";
+
 import BlogPost from "./pages/post/BlogPost";
 
 const Layout = () => {
-  const [menuOpen, setMenuOpen] = useState<boolean>(false);
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
   return (
-    <div className="relative ">
-      <Navbar
-        menuOpen={menuOpen}
-        setMenuOpen={setMenuOpen}
-        toggleMenu={toggleMenu}
-      />
-      {/* <MenuNav menuOpen={menuOpen} setMenuOpen={setMenuOpen} /> */}
-      {menuOpen && <MenuNav menuOpen={menuOpen} setMenuOpen={setMenuOpen} />}
+    <div>
+      <Navbar />
       <Outlet />
       <Footer />
     </div>
@@ -85,7 +75,7 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <div className="w-screen h-screen overflow-y-auto overflow-x-hidden">
+    <div className=" w-full absolute left-0 right-0 top-28 lg:top-40">
       <RouterProvider router={router} />
     </div>
   );

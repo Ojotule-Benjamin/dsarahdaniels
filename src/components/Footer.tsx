@@ -8,7 +8,7 @@ import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 
 const Footer = () => {
   return (
-    <div className="w-full h-80 flex flex-col items-center justify-center gap-2 bg-[#A6A6A6] relative bottom-0 top-screen">
+    <div className="w-full h-80 flex flex-col items-center justify-center gap-2 bg-[#A6A6A6] ">
       <div className=" flex flex-col items-center justify-center font-sacramento text-3xl text-primaryColorBlue font-normal ">
         <h1>Dsarahdaniels_brand</h1>
         <h1>Event Planner</h1>

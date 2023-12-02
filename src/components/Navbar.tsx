@@ -1,76 +1,25 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   FacebookIconSvg,
   InstagramIconSvg,
   TwitterIconSvg,
 } from "../assets/svgs/icons";
-import { Link } from "react-router-dom";
-import Logo from "../assets/imgs/Logo.png";
-import MenuIcon from "@mui/icons-material/Menu";
-import CloseIcon from "@mui/icons-material/Close";
 import { menuNav } from "../data";
-import { menuNavItems, NavbarProps } from "../interfaces/global.interface";
-import { Hidden } from "@mui/material";
+import { menuNavItems } from "../interfaces/global.interface";
+import logo from "../assets/svgs/logo.svg";
+import MenuNav from "./MenuNav";
 
-const Navbar: React.FC<NavbarProps> = ({
-  menuOpen,
-  setMenuOpen,
-  toggleMenu,
-}) => {
-  const [selected, setSelected] = useState<string | null>(null);
-
-  const handleSelected = (id: string) => {
-    setSelected(id);
-  };
-
-  // const menuNav: menuNavItems[] = [
-  //   {
-  //     id: "home",
-  //     label: "Home",
-  //     link: "/",
-  //   },
-  //   {
-  //     id: "about",
-  //     label: "About",
-  //     link: "/about",
-  //   },
-  //   {
-  //     id: "services",
-  //     label: "Services",
-  //     link: "/services",
-  //   },
-  //   {
-  //     id: "events",
-  //     label: "Events",
-  //     link: "/events",
-  //   },
-  //   {
-  //     id: "enquiry",
-  //     label: "Enquiry",
-  //     link: "/enquiry",
-  //   },
-  //   {
-  //     id: "blog",
-  //     label: "Blog",
-  //     link: "/blog",
-  //   },
-  //   {
-  //     id: "shop",
-  //     label: "Shop",
-  //     link: "/shop",
-  //   },
-  // ];
-
+const Navbar = () => {
   return (
-    <div className="w-full border-b-2 h-24 xs:h-36 flex  items-center  justify-between px-5 xs:px-16">
-      <div className=" w-32 h-24 xs:w-56 xs:h-36 flex items-center justify-center ">
-        <img
-          src={Logo}
-          alt="logo"
-          className=" w-32 h-24 xs:w-56 xs:h-36 object-cover xs:object-cover"
-        />
-      </div>
-      <ul className="xs:flex items-center gap-5 font-sanchez font-normal text-lg text-color-textColor hidden ">
+    <div className="w-full h-28 lg:h-40 flex items-center justify-between px-5 xs:px-16 fixed top-0 bg-white z-50">
+      <img
+        src={logo}
+        alt="logo"
+        className="w-28 lg:w-56 h-full object-cover xs:object-cover"
+      />
+
+      <ul className="hidden lg:flex items-center gap-5 font-sanchez font-normal text-lg text-color-textColor">
         {menuNav.map((item, index) => (
           <li key={index}>
             <Link to={item.link}>{item.label}</Link>
@@ -78,32 +27,8 @@ const Navbar: React.FC<NavbarProps> = ({
         ))}
       </ul>
 
-      {/* <ul className="xs:flex items-center gap-5 font-sanchez font-normal text-lg text-color-textColor hidden ">
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/about">About</Link>
-        </li>
-        <li>
-          <Link to="/services">Services</Link>
-        </li>
-        <li>
-          <Link to="/events">Events</Link>
-        </li>
-        <li>
-          <Link to="/enquiry">Enquiry</Link>
-        </li>
-        <li>
-          <Link to="/blog">Blog</Link>
-        </li>
-        <li>
-          <Link to="/shop">Shop</Link>
-        </li>
-      </ul> */}
-
-      <div className="xs:flex items-center gap-7 hidden">
-        <a href="www.facebook.com" target={"_blank"} rel="noreferrer">
+      <div className="hidden lg:flex items-center gap-7">
+        <a href="www.facebook.com" target="_blank" rel="noreferrer">
           <FacebookIconSvg />
         </a>
         <a href="www.facebook.com">
@@ -114,9 +39,8 @@ const Navbar: React.FC<NavbarProps> = ({
         </a>
       </div>
 
-      <div className="xs:hidden " onClick={toggleMenu}>
-        {menuOpen ? <CloseIcon /> : <MenuIcon />}
-      </div>
+      {/* mobile view */}
+      <MenuNav />
     </div>
   );
 };

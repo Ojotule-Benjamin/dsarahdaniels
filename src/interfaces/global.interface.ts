@@ -83,9 +83,9 @@ export type MeetCreativeDirectorProps = {
   descClassName?: string;
 };
 
-export type CarouselSectionProps = {
-  carouselImages: carouselImagesItems[];
-};
+// export type CarouselSectionProps = {
+//   carouselImages: carouselImagesItems[];
+// };
 
 export interface IEventDetailsProps {
   firstName: string;

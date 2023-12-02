@@ -9,6 +9,7 @@ import EventDetails from "../../components/EventDetails";
 import { carouselImagesItems } from "../../interfaces/global.interface";
 import creativeDirector from "../../assets/imgs/creativeDirector.png";
 import { useNavigate } from "react-router-dom";
+import Hero from "../../components/Hero";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -38,8 +39,10 @@ const Home = () => {
   ];
 
   return (
-    <div className="">
-      <CarouselSection carouselImages={carouselImages} />
+    <div className=" ">
+      {/* <CarouselSection /> */}
+
+      <Hero />
       <AboutUs />
       <MeetCreativeDirector
         img={creativeDirector}
