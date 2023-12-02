@@ -55,7 +55,7 @@ const Hero = () => {
         <h3 className="font-playfairDisplay font-medium text-primaryColorBlue text-2xl lg:text-4xl text-center lg:text-start mb-3 lg:mb-5">
           We Bring Your Events To Life
         </h3>
-        <p className="font-playfairDisplay font-medium text-textColorBlack text-sm leading-5 text-center lg:text-start">
+        <p className="font-playfairDisplay font-medium text-textColorBlack text-sm leading-3 lg:leading-7 text-center lg:text-start">
           At Dsarah Daniels Events, we understand the power of storytelling and
           the impact it has on evoking emotions and creating lasting memories.
           We strive to create an interactive experience for you and your guests
