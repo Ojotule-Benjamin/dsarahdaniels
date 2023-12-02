@@ -57,12 +57,12 @@ const Home = () => {
         planning and design, and let's create unforgettable memories together"
         title="Meet Our Creative Director"
         subTitle="Sarah Daniels"
-        generalClassName=" h-96 lg:h-[365px] gap-2 lg:gap-2  p-4 lg:p-8"
+        generalClassName=" h-96 lg:h-auto gap-2 lg:gap-5 p-4 lg:p-8"
         button={
           <CustomButton
             text="Connect"
             onClick={handleClick}
-            className="w-20 h-5 xs:w-32 xs:h-9 text-[7px] xs:text-sm"
+            className="w-20 h-5 xs:w-32 xs:h-9 text-xs "
           />
         }
       />

@@ -6,7 +6,6 @@ import {
   TwitterIconSvg,
 } from "../assets/svgs/icons";
 import { menuNav } from "../data";
-import { menuNavItems } from "../interfaces/global.interface";
 import logo from "../assets/svgs/logo.svg";
 import MenuNav from "./MenuNav";
 
@@ -16,7 +15,7 @@ const Navbar = () => {
       <img
         src={logo}
         alt="logo"
-        className="w-28 lg:w-56 h-full object-cover xs:object-cover"
+        className="w-28 lg:w-56 h-full object-cover "
       />
 
       <ul className="hidden lg:flex items-center gap-5 font-sanchez font-normal text-lg text-color-textColor">

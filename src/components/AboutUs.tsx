@@ -18,14 +18,14 @@ const AboutUs = () => {
         ></iframe>
       </div>
       <div className="flex flex-[0.5] flex-col items-center gap-2 xs:gap-4 ">
-        <h1 className="font-playfairDisplay font-medium text-primaryColorBlue text-2xl xs:text-4xl text-center">
+        <h1 className="font-playfairDisplay font-medium text-primaryColorBlue text-2xl xs:text-4xl text-center lg:text-start">
           Embark on a Captivating Event Experience
         </h1>
-        <h3 className="font-playfairDisplay font-medium text-primaryColorBlue text-sm xs:text-xl text-center">
+        <h3 className="font-playfairDisplay font-medium text-primaryColorBlue text-xs lg:text-xl text-center lg:text-start">
           Dsarah Daniels Events is not just an event planning company, it's a
           creative journey that celebrates your unique story.
         </h3>
-        <p className="font-playfairDisplay font-medium text-textColorBlack text-base text-center">
+        <p className="font-playfairDisplay font-medium text-textColorBlack text-sm leading-5 text-justify lg:text-justify">
           At Dsarah Daniels Events, we understand the power of storytelling and
           the impact it has on evoking emotions and creating lasting memories.
           We strive to create an interactive experience for you and your guests

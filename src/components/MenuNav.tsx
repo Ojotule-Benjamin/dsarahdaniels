@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { MenuProps } from "../interfaces/global.interface";
 import { Link } from "react-router-dom";
 import {
   FacebookIconSvg,
@@ -23,26 +22,29 @@ const MenuNav = () => {
         )}
       </div>
 
+      {/* modal display */}
+
       {menuOpen && (
-        <div className="fixed w-full h-screen flex lg:hidden bg-green-500 left-0 top-28 duration-700 ease-out">
-          <ul className=" w-full h-full flex flex-col items-center justify-center gap-5 font-sanchez font-normal text-lg text-white">
+        <div className="fixed w-full h-screen flex lg:hidden bg-primaryColorBlue left-0 top-28 duration-500 ease-out">
+          <ul className=" w-full h-full flex flex-col items-center justify-center gap-5 font-sanchez font-normal text-2xl text-white ">
             {menuNav.map((item, index) => (
-              <li key={index}>
+              <li key={index} className=" hover:border-b-4">
                 <Link to={item.link} onClick={() => setMenuOpen(false)}>
                   {item.label}
                 </Link>
               </li>
             ))}
-            <div className="flex items-center justify-center gap-7">
-              <a href="www.facebook.com" target="_blank" rel="noreferrer">
+            <div className=" w-full flex items-center justify-center gap-7 ">
+              <Link to={"http://www.google.com"}>
                 <FacebookIconSvg />
-              </a>
-              <a href="www.facebook.com">
+              </Link>
+
+              <Link to={"http://www.google.com"}>
                 <InstagramIconSvg />
-              </a>
-              <a href="www.facebook.com">
+              </Link>
+              <Link to={"http://www.google.com"}>
                 <TwitterIconSvg />
-              </a>
+              </Link>
             </div>
           </ul>
         </div>
