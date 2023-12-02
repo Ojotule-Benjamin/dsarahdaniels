@@ -3,7 +3,6 @@ import hero1 from "../assets/svgs/hero1.svg";
 import carousel_1 from "../assets/imgs/carousel_1.png";
 import carousel_2 from "../assets/imgs/carousel_2.png";
 import carousel_3 from "../assets/imgs/carousel_3.png";
-import hero2 from "../assets/svgs/hero2.svg";
 
 type carouselImagesProps = {
   id: number;

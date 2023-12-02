@@ -13,6 +13,10 @@ import { useLocation } from "react-router-dom";
 const Navbar = () => {
   const location = useLocation();
 
+  const handleNavigation = () => {
+    window.scroll(0, 0);
+  };
+
   return (
     <div className="w-full h-28 lg:h-40 flex items-center justify-between px-5 xs:px-16 fixed top-0 bg-white z-50">
       <Link to={"/"}>
@@ -27,6 +31,7 @@ const Navbar = () => {
         {menuNav.map((item, index) => (
           <li key={index}>
             <Link
+              onClick={handleNavigation}
               to={item.link}
               className={`${
                 location.pathname === item.link ? "text-primaryColorBlue" : ""

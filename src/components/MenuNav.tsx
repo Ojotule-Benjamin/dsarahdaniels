@@ -12,6 +12,11 @@ import { menuNav } from "../data";
 const MenuNav = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const handleNavigation = () => {
+    window.scroll(0, 0);
+    setMenuOpen(false);
+  };
+
   return (
     <div>
       <div className="flex lg:hidden">
@@ -29,7 +34,7 @@ const MenuNav = () => {
           <ul className=" w-full h-full flex flex-col items-center justify-center gap-5 font-sanchez font-normal text-2xl text-white ">
             {menuNav.map((item, index) => (
               <li key={index} className=" hover:border-b-4">
-                <Link to={item.link} onClick={() => setMenuOpen(false)}>
+                <Link to={item.link} onClick={handleNavigation}>
                   {item.label}
                 </Link>
               </li>

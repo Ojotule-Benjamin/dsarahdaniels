@@ -1,12 +1,11 @@
 import React from "react";
 import CustomButton from "../../components/CustomButton";
 import AboutUs from "../../components/AboutUs";
-import CarouselSection from "../../components/CarouselSection";
 import MeetCreativeDirector from "../../components/MeetCreativeDirector";
 import SneakPeakGallery from "../../components/SneakPeakGallery";
 import GetUpdates from "../../components/GetUpdates";
 import EventDetails from "../../components/EventDetails";
-import { carouselImagesItems } from "../../interfaces/global.interface";
+
 import creativeDirector from "../../assets/imgs/creativeDirector.png";
 import { useNavigate } from "react-router-dom";
 import Hero from "../../components/Hero";
@@ -17,31 +16,9 @@ const Home = () => {
   const handleClick = () => {
     navigate("/enquiry");
   };
-  const carouselImages: carouselImagesItems[] = [
-    {
-      id: 1,
-      src: require("../../assets/imgs/carousel_1.png"),
-      //src: require("../../assets/imgs/sneakPeak2.png"),
-      alt: "slide 1",
-    },
-    {
-      id: 2,
-      src: require("../../assets/imgs/carousel_2.png"),
-      //src: require("../../assets/imgs/sneakPeak3.png"),
-      alt: "slide 2",
-    },
-    {
-      id: 3,
-      src: require("../../assets/imgs/carousel_3.png"),
-      //src: require("../../assets/imgs/sneakPeak5.png"),
-      alt: "slide 3",
-    },
-  ];
 
   return (
     <div className=" ">
-      {/* <CarouselSection /> */}
-
       <Hero />
       <AboutUs />
       <MeetCreativeDirector

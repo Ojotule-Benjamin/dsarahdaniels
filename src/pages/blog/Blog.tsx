@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Header from "../../components/Header";
 import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
 import CommentOutlinedIcon from "@mui/icons-material/CommentOutlined";
@@ -7,8 +7,7 @@ import services_4 from "../../assets/imgs/services_4.png";
 import { posts } from "../../data";
 import { postsItem } from "../../interfaces/global.interface";
 import GetUpdates from "../../components/GetUpdates";
-import { Link, useNavigate } from "react-router-dom";
-import { error } from "console";
+import { useNavigate } from "react-router-dom";
 
 interface Post {
   userId: number;

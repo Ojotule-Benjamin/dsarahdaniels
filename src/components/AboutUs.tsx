@@ -1,14 +1,13 @@
 import React from "react";
 import CustomButton from "./CustomButton";
 import { Link } from "react-router-dom";
-import carousel_1 from "../assets/imgs/carousel_1.png";
 
 const AboutUs = () => {
   return (
     <div className="w-full h-auto xs:h-full gap-4 xs:gap-8 flex flex-1 items-center justify-center flex-col lg:flex-row px-5 xs:px-16 py-10 lg:py-16 bg-secondaryColorLight">
       <div className="w-full h-[248px] xs:w-[560px] xs:h-[374px] flex items-center justify-center flex-[0.5]">
         {/* TODO: sort out edge cases, alternatives when there is no network */}
-        {/* <img src={carousel_1} alt="" /> */}
+
         <iframe
           width="560"
           height="374"

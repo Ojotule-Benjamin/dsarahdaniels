@@ -6,7 +6,6 @@ import { servicesList } from "../../data";
 import { servicesListItems } from "../../interfaces/global.interface";
 import CustomButton from "../../components/CustomButton";
 import { useNavigate } from "react-router-dom";
-import CarouselSection from "../../components/CarouselSection";
 
 const Services = () => {
   const navigate = useNavigate();

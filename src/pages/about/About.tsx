@@ -1,10 +1,6 @@
 import React from "react";
-import CarouselSection from "../../components/CarouselSection";
 import WhatWeDo from "../../components/WhatWeDo";
-import {
-  carouselImagesItems,
-  howWeWorkImgsItem,
-} from "../../interfaces/global.interface";
+import { howWeWorkImgsItem } from "../../interfaces/global.interface";
 import GetUpdates from "../../components/GetUpdates";
 import MeetCreativeDirector from "../../components/MeetCreativeDirector";
 import Reviews from "../../components/Reviews";
@@ -19,27 +15,6 @@ const About = () => {
   const handleClick = () => {
     navigate("/contact");
   };
-
-  const aboutCarouselImgs: carouselImagesItems[] = [
-    {
-      id: 1,
-      //src: require("../../assets/imgs/carousel_1.png"),
-      src: require("../../assets/imgs/sneakPeak2.png"),
-      alt: "slide 1",
-    },
-    // {
-    //   id: 2,
-    //   //src: require("../../assets/imgs/carousel_2.png"),
-    //   src: require("../../assets/imgs/sneakPeak3.png"),
-    //   alt: "slide 2",
-    // },
-    // {
-    //   id: 3,
-    //   //src: require("../../assets/imgs/carousel_3.png"),
-    //   src: require("../../assets/imgs/sneakPeak5.png"),
-    //   alt: "slide 3",
-    // },
-  ];
 
   const howWeWorkImgs: howWeWorkImgsItem[] = [
     {
@@ -85,7 +60,6 @@ const About = () => {
         header="About Us And We Do"
         className="w-full h-12 lg:h-24 flex items-center justify-center font-playfairDisplay font-normal text-xl md:text-2xl lg:text-5xl text-primaryColorBlue"
       />
-      {/* <CarouselSection carouselImages={aboutCarouselImgs} /> */}
 
       <WhatWeDo />
       <div className="hidden md:flex w-full p-0 md:p-16 my-0">
@@ -115,7 +89,6 @@ const About = () => {
         img={img_1}
         subTitle="Sarah Daniels"
         button={<CustomButton text="Connect" onClick={() => handleClick()} />}
-        // generalClassName="flex items-center justify-around"
         descClassName="text-lg"
         generalClassName=" h-52 lg:h-[365px] gap-2 lg:gap-2  p-4 lg:p-8"
         desc="Creating unforgettable events is an art that combines joy, love, and simplicity, and at Dsarah Daniels, we are masters of this craft."
